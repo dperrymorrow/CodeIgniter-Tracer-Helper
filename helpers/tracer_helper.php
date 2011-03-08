@@ -9,7 +9,7 @@ function trace( $val, $exit=FALSE, $show_query=FALSE ){
 	
 	if( $CI->config->item('tracer_enabled') ){
 		
-		$CI->load->database();
+		//$CI->load->database();
 		
 		$trace = debug_backtrace();
 		$trace = $trace[ 0 ];
@@ -36,7 +36,9 @@ function trace( $val, $exit=FALSE, $show_query=FALSE ){
 		$msg = str_replace( ']', '</span>]', $msg );
 		
 		if( $CI->config->item( 'tracer_show_last_query' ) or $show_query ){
-			$msg .= '<span class="sparkTracerLastQuery">' . $CI->db->last_query() . '</span>';
+			if( isset( $CI->db )){
+				$msg .= '<span class="sparkTracerLastQuery">' . $CI->db->last_query() . '</span>';
+			}
 		}
 
 		$template = file_get_contents( 'sparks/tracer/' . $CI->config->item( 'tracer_version' ) . '/views/tracer_template.html' );

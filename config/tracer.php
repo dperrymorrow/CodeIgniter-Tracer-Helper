@@ -3,7 +3,7 @@
 // this will run on the values you are tracing out, default htmlspecialchars
 $config[ 'tracer_function' ] = 'htmlspecialchars';
 // the version of the spark, this must be correct for pathing, should be the folder name inside of sparks/tracer
-$config[ 'tracer_version' ] = '0.1';
+$config[ 'tracer_version' ] = '0.3';
 // if you would like to show the last 
 $config[ 'tracer_show_last_query' ] = TRUE;
 // determines if the tracer runs or not, 
