@@ -9,6 +9,8 @@ function trace( $val, $exit=FALSE, $show_query=FALSE ){
 	
 	if( $CI->config->item('tracer_enabled') ){
 		
+		$CI->load->database();
+		
 		$trace = debug_backtrace();
 		$trace = $trace[ 0 ];
 		$file = $trace[ 'file' ];
