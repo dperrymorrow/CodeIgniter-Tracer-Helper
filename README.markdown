@@ -3,12 +3,14 @@ This is a very simple yet useful helper for tracing out data while you are worki
 
 ## Features Overview
 
--- You choose to exit PHP after the trace or not
--- You choose if you want to view the last sql query with your trace
--- Can trace entire set of vars passed to the view via Loader class
--- File name and line number included as a backtrace from where the trace was called
--- Easily setup environment switching to keep traces off your stage and prod boxes
--- Easily style the traces with the externalized styles and view template in the views folder
+- You choose to exit PHP after the trace or not
+- You choose if you want to view the last sql query with your trace
+- Can trace entire set of vars passed to the view via Loader class
+- File name and line number included as a backtrace from where the trace was called
+- Easily setup environment switching to keep traces off your staging and production boxes
+- Easily style the traces with the externalized styles and view template in the views folder
+
+![Table Torch](http://dl.dropbox.com/u/9683877/spark_imgs/tracer.png "Table Torch Example")
 
 ## Example Usage: ( x.x indicates the version you have installed on your build )
     
@@ -28,8 +30,10 @@ $this->load->view( 'viewname', $data ); See  http://codeigniter.com/user_guide/l
     // or in all cases the second param will exit php if true
     trace( '*vars*', TRUE );
 
-Thats it, and please log issues or comments at 
-https://github.com/dperrymorrow/CodeIgniter-Tracer-Helper/issues
+Thats it!!
+
+- [Log Issues or Suggestions](https://github.com/dperrymorrow/CodeIgniter-Tracer-Helper/issues)
+- [Follow me on Twitter](http://twitter.com/dperrymorrow)
 
 
 	
