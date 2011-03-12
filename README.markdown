@@ -4,13 +4,14 @@ This is a very simple yet useful helper for tracing out data while you are worki
 ## Features Overview
 
 - You choose to exit PHP after the trace or not
-- You choose if you want to view the last sql query with your trace
+- Trace all queries called and benchmark of each one
 - Can trace entire set of vars passed to the view via Loader class
+- Can trace out all benchmarks set 
 - File name and line number included as a backtrace from where the trace was called
 - Easily setup environment switching to keep traces off your staging and production boxes
 - Easily style the traces with the externalized styles and view template in the views folder
 
-![Table Torch](http://dl.dropbox.com/u/9683877/spark_imgs/tracer.png "Table Torch Example")
+![Table Torch](http://dl.dropbox.com/u/9683877/spark_imgs/tracer.png "Tracer Example")
 
 ## Example Usage: ( x.x indicates the version you have installed on your build )
     
@@ -18,7 +19,10 @@ This is a very simple yet useful helper for tracing out data while you are worki
 	
 	function index(){
 		$this->load->spark( 'tracer/x.x' );
-		trace( $_SERVER );
+		// keep on rendering page if false ( default )
+		trace( $_SERVER, FALSE );
+		// exit php and rendering if true
+		trace( $_SERVER, TRUE );
 	}
 	
 	
@@ -26,9 +30,7 @@ This is a very simple yet useful helper for tracing out data while you are worki
 You can also trace out everything that was passed to your view. This must be called after you load view and pass data via 
 $this->load->view( 'viewname', $data ); See  http://codeigniter.com/user_guide/libraries/loader.html for more information on views and data.
 
-    trace( '*vars*' );
-    // or in all cases the second param will exit php if true
-    trace( '*vars*', TRUE );
+    trace_viewdata( TRUE ); // will exit if true, no if false
 
 Thats it!!
 

@@ -1,13 +1,15 @@
 <?php
 
 // this will run on the values you are tracing out, default htmlspecialchars
-$config[ 'tracer_function' ] = 'htmlspecialchars';
+$config[ 'tracer' ][ 'function' ] = 'htmlspecialchars';
 // the version of the spark, this must be correct for pathing, should be the folder name inside of sparks/tracer
-$config[ 'tracer_version' ] = '0.3';
+$config[ 'tracer' ][ 'version' ] = '0.4';
 // if you would like to show the last 
-$config[ 'tracer_show_last_query' ] = TRUE;
+$config[ 'tracer' ][ 'show_queries' ] = TRUE;
+// if you would like to show all benchmarks 
+$config[ 'tracer' ][ 'show_benchmarks' ] = TRUE;
 // determines if the tracer runs or not, 
-$config[ 'tracer_enabled' ] = TRUE;
+$config[ 'tracer' ][ 'enabled' ] = TRUE;
 
 /*
 its probally best to environment switch,
