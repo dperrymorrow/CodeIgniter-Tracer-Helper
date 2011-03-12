@@ -1,6 +1,6 @@
 <?php
 
-function trace_viewdata( $exit ){
+function trace_viewdata( $exit=FALSE ){
 	$CI = &get_instance();
 	trace( $CI->load->_ci_cached_vars, $exit );
 }
