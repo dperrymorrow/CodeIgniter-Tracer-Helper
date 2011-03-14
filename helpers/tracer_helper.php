@@ -46,7 +46,7 @@ function trace( $val, $exit=FALSE ){
 				}
 				
 			}else{
-				$msg .= 'Your Database has not been initialized at the time of this trace.';
+				$msg .= "<div class=\"sparkTracerQuery\">Your Database has not been initialized at the time of this trace.</div>";
 			}
 		}
 		
