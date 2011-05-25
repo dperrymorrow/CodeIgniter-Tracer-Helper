@@ -65,13 +65,14 @@ function trace( $val, $exit=FALSE ){
 			}
 		}
 		
+		$load_path = dirname(__DIR__).DIRECTORY_SEPARATOR . 'views'.DIRECTORY_SEPARATOR;
 
-		$template = file_get_contents( 'sparks/tracer/' . $prefs[ 'version' ] . '/views/tracer_template.html' );
+		$template = file_get_contents( $load_path.'tracer_template.html' );
 		$final_trace = str_replace( '{msg}', $msg, $template );
 		
 		if( !defined( 'TRACER_FIRED' )){
 			define( 'TRACER_FIRED', TRUE );
-			$file = 'sparks/tracer/' . $prefs[ 'version' ] . '/views/tracer_styles.html';
+			$file = $load_path .'tracer_styles.html';
 			echo file_get_contents( $file );
 		}
 		

@@ -2,8 +2,6 @@
 
 // this will run on the values you are tracing out, default htmlspecialchars
 $config[ 'tracer' ][ 'function' ] = 'htmlspecialchars';
-// the version of the spark, this must be correct for pathing, should be the folder name inside of sparks/tracer
-$config[ 'tracer' ][ 'version' ] = '0.5';
 // if you would like to show the last 
 $config[ 'tracer' ][ 'show_queries' ] = TRUE;
 // if you would like to show all benchmarks 
