@@ -1,4 +1,8 @@
 # Tracer Helper Spark
+
+## if you are using CI 2.0.2 you need to read this article before using my, or any other sparks for that matter. 2.0.2 has a bug with the loader class that breaks the sparks MY_Loader extension thereof. [http://codefury.net/2011/05/getsparks-org-beta-released-big-changes/](http://codefury.net/2011/05/getsparks-org-beta-released-big-changes/)
+
+
 This is a very simple yet useful helper for tracing out data while you are working. Will trace out strings and arrays recursively.
 
 ## Features Overview
